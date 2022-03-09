@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import java.util.*
 
 class MainViewModel : ViewModel() {
-
     companion object {
         private const val ONE_SECOND = 1000
     }
