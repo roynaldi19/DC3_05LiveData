@@ -1,10 +1,10 @@
-package com.roynaldi19.bfaa05_02livedata
+package com.roynaldi19.dc3_03livedata
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.roynaldi19.bfaa05_02livedata.databinding.ActivityMainBinding
+import com.roynaldi19.dc3_03livedata.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

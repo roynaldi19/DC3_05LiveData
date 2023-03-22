@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BFAA05_02LiveData</string>
+    <string name="app_name">DC3_05LiveData</string>
     <string name="seconds">%d seconds elapsed</string>
     <string name="hello_dicoding">Hello Dicoding!</string>
 </resources>
