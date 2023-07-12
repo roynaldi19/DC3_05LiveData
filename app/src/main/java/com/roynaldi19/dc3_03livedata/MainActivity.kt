@@ -7,26 +7,25 @@ import androidx.lifecycle.ViewModelProvider
 import com.roynaldi19.dc3_03livedata.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    private lateinit var activityMainBinding: ActivityMainBinding
-    private lateinit var liveDataTimerViewModel: MainViewModel
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var viewModel: MainViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        activityMainBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(activityMainBinding.root)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        liveDataTimerViewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
         subscribe()
     }
 
-    private fun subscribe() {
-        val elapsedTimerObserver = Observer<Long?> { long ->
-            val newText = this@MainActivity.resources.getString(R.string.seconds, long)
-            activityMainBinding.timerTextview.text = newText
+    private fun subscribe(){
+        val elapsedTimeObserver = Observer<Long?> { aLong ->
+            val newText = this@MainActivity.resources.getString(R.string.seconds,aLong)
+            binding.timerTextview.text = newText
         }
 
-        liveDataTimerViewModel.getElapsedTime().observe(this, elapsedTimerObserver)
+        viewModel.getElapsedTime().observe(this, elapsedTimeObserver)
     }
 }
