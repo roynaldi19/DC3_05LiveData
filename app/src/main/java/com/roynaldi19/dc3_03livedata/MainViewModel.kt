@@ -4,7 +4,6 @@ import android.os.SystemClock
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.roynaldi19.dc3_03livedata.databinding.ActivityMainBinding
 import java.util.Timer
 import java.util.TimerTask
 
